@@ -63,4 +63,4 @@ jobs:
         with:
           app-name: 'Web-Artemis'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_667D0409893C4679A789D85223F25390 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E48635B332944AC5B50CE5D1318F4D8C }}
