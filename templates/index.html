@@ -3,264 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <title>Missão Artemis</title>
-
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #050814, #0b1a3a);
-        color: white;
-        overflow-x: hidden;
-    }
-
-    body::before {
-        content: "";
-        position: fixed;
-        width: 200%;
-        height: 200%;
-        background: url('https://www.transparenttextures.com/patterns/stardust.png');
-        animation: estrelas 80s linear infinite;
-        opacity: 0.2;
-        z-index: -1;
-    }
-
-    @keyframes estrelas {
-        from {transform: translateY(0);}
-        to {transform: translateY(-1200px);}
-    }
-
-    header {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    header img {
-        width: 260px;
-        filter: drop-shadow(0 0 10px rgba(77,163,255,0.5));
-        transition: 0.4s;
-    }
-
-    header img:hover {
-        transform: scale(1.08);
-    }
-
-    h1 {
-        font-size: 42px;
-        margin: 10px 0 5px;
-        transition: 0.3s;
-    }
-
-    h1:hover {
-        color: #4da3ff;
-        transform: scale(1.05);
-    }
-
-    .container {
-        max-width: 1050px;
-        margin: auto;
-        padding: 20px;
-    }
-
-    h2 {
-        border-left: 5px solid #4da3ff;
-        padding-left: 10px;
-        margin-top: 40px;
-        transition: 0.3s;
-    }
-
-    h2:hover {
-        transform: translateX(8px);
-        color: #4da3ff;
-    }
-
-    p {
-        line-height: 1.7;
-        font-size: 16px;
-        transition: 0.3s;
-    }
-
-    p:hover {
-        transform: scale(1.02);
-        color: #cfe8ff;
-    }
-
-    .card {
-        background: rgba(255,255,255,0.06);
-        padding: 18px;
-        border-radius: 14px;
-        margin-top: 10px;
-        transition: 0.3s;
-        backdrop-filter: blur(5px);
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        background: rgba(77,163,255,0.15);
-    }
-
-    ul {
-        padding-left: 20px;
-    }
-
-    li {
-        line-height: 1.6;
-        transition: 0.3s;
-    }
-
-    li:hover {
-        transform: translateX(5px);
-        color: #cfe8ff;
-    }
-
-    .galeria {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 18px;
-        margin-top: 20px;
-    }
-
-    .galeria img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 18px;
-        border: 2px solid rgba(77,163,255,0.4);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-        transition: 0.4s;
-    }
-
-    .galeria img:hover {
-        transform: scale(1.08);
-        box-shadow: 0 15px 35px rgba(77,163,255,0.6);
-    }
-
-    footer {
-        text-align: center;
-        padding: 30px;
-        opacity: 0.8;
-        font-size: 14px;
-    }
-</style>
-
 </head>
 
 <body>
 
-<header>
-    <img src="{{ url_for('static', filename='images/logo.jpg') }}">
+<center>
+    <img src="{{ url_for('static', filename='images/logo.jpg') }}" width="200">
     <h1>Missão Artemis 🚀</h1>
     <p>NASA - Retorno da humanidade à Lua e preparação para Marte</p>
-</header>
+</center>
 
-<div class="container">
+<hr>
 
-    <h2>🌕 Visão Geral da Missão</h2>
-    <div class="card">
-        <p>
-            A Missão Artemis é o programa espacial da NASA criado para levar novamente humanos à Lua
-            após mais de 50 anos desde o programa Apollo.
-        </p>
-        <p>
-            Seu objetivo principal é estabelecer uma presença sustentável na Lua e preparar a exploração humana de Marte.
-        </p>
-    </div>
+<h2>🌕 Visão Geral da Missão</h2>
+<p>
+A Missão Artemis é o programa espacial da NASA criado para levar novamente humanos à Lua após mais de 50 anos desde o programa Apollo.
+Seu objetivo principal é estabelecer uma presença sustentável na Lua e preparar a exploração humana de Marte.
+</p>
 
-    <h2>📜 Origem e motivação</h2>
-    <div class="card">
-        <p>
-            A missão surgiu da necessidade de expandir a exploração espacial e desenvolver novas tecnologias para viagens mais longas.
-            A Lua foi escolhida como base por ser próxima e ideal para testes científicos.
-        </p>
-    </div>
+<h2>📜 Origem e motivação</h2>
+<p>
+A missão surgiu da necessidade de expandir a exploração espacial e desenvolver novas tecnologias para viagens mais longas.
+A Lua foi escolhida por ser próxima e ideal para testes científicos.
+</p>
 
-    <h2>🚀 Fases da missão Artemis</h2>
-    <div class="card">
-        <p><b>Artemis I:</b> Missão não tripulada que testou o foguete SLS e a cápsula Orion em órbita lunar.</p>
-        <p><b>Artemis II:</b> Primeira missão com astronautas em órbita da Lua.</p>
-        <p><b>Artemis III:</b> Pouso humano na superfície lunar, na região do polo sul.</p>
-    </div>
+<h2>🚀 Fases da missão Artemis</h2>
+<p>
+<b>Artemis I:</b> missão não tripulada que testou o foguete SLS e a cápsula Orion em órbita lunar.
+</p>
+<p>
+<b>Artemis II:</b> primeira missão com astronautas em órbita da Lua.
+</p>
+<p>
+<b>Artemis III:</b> pouso humano na superfície lunar na região do polo sul.
+</p>
 
-    <h2>🌔 Viagem até a Lua</h2>
-    <div class="card">
-        <p>
-            O lançamento é feito pelo foguete Space Launch System (SLS), o mais poderoso já construído pela NASA.
-        </p>
-        <p>
-            A cápsula Orion entra em órbita terrestre, realiza testes e segue em trajetória lunar por cerca de 3 dias.
-        </p>
-        <p>
-            Durante o trajeto, sistemas de navegação e suporte à vida são monitorados continuamente.
-        </p>
-    </div>
+<h2>🌔 Viagem até a Lua</h2>
+<p>
+O lançamento é feito pelo foguete Space Launch System (SLS), o mais poderoso da NASA.
+</p>
+<p>
+A cápsula Orion entra em órbita terrestre, realiza testes e segue em direção à Lua em cerca de 3 dias.
+</p>
+<p>
+Durante o trajeto, os sistemas de navegação e vida são monitorados constantemente.
+</p>
 
-    <h2>🌕 Chegada e órbita lunar</h2>
-    <div class="card">
-        <p>
-            Ao chegar na Lua, a cápsula entra em órbita e realiza voltas ao redor do satélite para testes de estabilidade.
-        </p>
-        <p>
-            Essa fase é essencial para garantir segurança antes do pouso tripulado.
-        </p>
-    </div>
+<h2>🌕 Chegada e órbita lunar</h2>
+<p>
+Ao chegar na Lua, a cápsula entra em órbita e realiza voltas ao redor do satélite.
+</p>
+<p>
+Essa fase é importante para testar estabilidade e segurança antes do pouso.
+</p>
 
-    <h2>👨‍🚀 Vida dos astronautas</h2>
-    <div class="card">
-        <p>
-            Os astronautas enfrentam microgravidade, isolamento e radiação espacial.
-        </p>
-        <p>
-            Eles vivem dentro da cápsula Orion, realizando experimentos e mantendo comunicação com a NASA.
-        </p>
-        <p>
-            O treinamento inclui simulações de falhas, pousos e emergências.
-        </p>
-    </div>
+<h2>👨‍🚀 Vida dos astronautas</h2>
+<p>
+Os astronautas enfrentam microgravidade, isolamento e radiação espacial.
+</p>
+<p>
+Eles vivem dentro da cápsula Orion e realizam experimentos durante toda a missão.
+</p>
 
-    <h2>🌍 Retorno à Terra</h2>
-    <div class="card">
-        <p>
-            A cápsula retorna em alta velocidade e enfrenta temperaturas extremas na reentrada atmosférica.
-        </p>
-        <p>
-            Um escudo térmico protege a nave até o pouso no oceano, onde equipes de resgate recuperam os astronautas.
-        </p>
-    </div>
+<h2>🌍 Retorno à Terra</h2>
+<p>
+A cápsula retorna em alta velocidade e enfrenta temperaturas extremas na reentrada.
+</p>
+<p>
+Um escudo térmico protege a nave até o pouso no oceano.
+</p>
 
-    <h2>🧠 Importância da missão</h2>
-    <div class="card">
-        <p>
-            A Artemis representa um marco na exploração espacial moderna.
-            Ela impulsiona tecnologia, ciência e cooperação internacional.
-        </p>
-        <p>
-            Também é o primeiro passo para a futura colonização da Lua e missões tripuladas a Marte.
-        </p>
-    </div>
+<h2>🧠 Importância da missão</h2>
+<p>
+A Artemis representa um avanço histórico na exploração espacial.
+</p>
+<p>
+Ela prepara o caminho para a colonização da Lua e futuras missões a Marte.
+</p>
 
-    <h2>🎯 Objetivos principais</h2>
-    <ul>
-        <li>Exploração sustentável da Lua</li>
-        <li>Construção de base lunar permanente</li>
-        <li>Estudo de recursos lunares</li>
-        <li>Preparação para Marte</li>
-        <li>Avanço tecnológico global</li>
-    </ul>
+<h2>🎯 Objetivos principais</h2>
+<ul>
+    <li>Exploração sustentável da Lua</li>
+    <li>Construção de base lunar</li>
+    <li>Estudo de recursos lunares</li>
+    <li>Preparação para Marte</li>
+    <li>Avanço tecnológico global</li>
+</ul>
 
-    <h2>🖼️ Galeria da missão</h2>
+<h2>🖼️ Galeria da missão</h2>
 
-    <div class="galeria">
-        <img src="{{ url_for('static', filename='images/imagem1.jpg') }}">
-        <img src="{{ url_for('static', filename='images/imagem2.jpg') }}">
-        <img src="{{ url_for('static', filename='images/imagem3.jpg') }}">
-        <img src="{{ url_for('static', filename='images/imagem4.jpg') }}">
-        <img src="{{ url_for('static', filename='images/imagem5.jpg') }}">
-    </div>
+<img src="{{ url_for('static', filename='images/imagem1.jpg') }}" width="200">
+<img src="{{ url_for('static', filename='images/imagem2.jpg') }}" width="200">
+<img src="{{ url_for('static', filename='images/imagem3.jpg') }}" width="200">
+<img src="{{ url_for('static', filename='images/imagem4.jpg') }}" width="200">
+<img src="{{ url_for('static', filename='images/imagem5.jpg') }}" width="200">
 
-</div>
+<hr>
 
-<footer>
-    Projeto educativo - Missão Artemis | NASA
-</footer>
+<center>
+<p>Projeto educativo - Missão Artemis | NASA</p>
+</center>
 
 </body>
 </html>
