@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missão Artemis - Retorno à Lua</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a2a 0%, #1a1a3a 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 2px solid #ffd700;
+}
+
+.logo {
+    max-width: 220px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.content {
+    padding: 40px 0;
+}
+
+.mission-text {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.mission-text h2 {
+    color: #ffd700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.mission-text p {
+    margin-bottom: 15px;
+}
+
+.mission-text ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.mission-text li {
+    margin-bottom: 10px;
+}
+
+.gallery {
+    margin-top: 40px;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffd700;
+    font-size: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.gallery-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffd700;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #ffd700;
+    margin-top: 40px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    .gallery-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+    <img src="{{ url_for('static', filename='images/logo.jpg') }}" class="logo">
+
+    <h1>🚀 Missão Artemis</h1>
+
+    <p class="subtitle">
+        NASA - Retorno à Lua e preparação para Marte
+    </p>
+
+</header>
+
+<div class="content">
+
+    <div class="mission-text">
+
+        <h2>🌕 Visão Geral</h2>
+
+        <p>
+            A Missão Artemis é o programa da NASA que leva humanos de volta à Lua após mais de 50 anos.
+            O objetivo é criar uma presença permanente no satélite e preparar futuras missões para Marte.
+        </p>
+
+        <h2>📜 Origem</h2>
+
+        <p>
+            A missão foi criada para expandir a exploração espacial e testar novas tecnologias em ambiente lunar.
+        </p>
+
+        <h2>🚀 Fases da missão</h2>
+
+        <ul>
+            <li><b>Artemis I:</b> teste sem tripulação em órbita lunar</li>
+            <li><b>Artemis II:</b> voo com astronautas ao redor da Lua</li>
+            <li><b>Artemis III:</b> pouso humano na superfície lunar</li>
+        </ul>
+
+        <h2>🌔 Viagem até a Lua</h2>
+
+        <p>
+            O foguete SLS leva a cápsula Orion ao espaço. A viagem dura cerca de 3 dias até a Lua.
+        </p>
+
+        <h2>🌕 Órbita lunar</h2>
+
+        <p>
+            A nave entra em órbita da Lua para testes de segurança antes do pouso.
+        </p>
+
+        <h2>👨‍🚀 Astronautas</h2>
+
+        <p>
+            Os astronautas vivem na cápsula Orion e realizam experimentos durante a missão.
+        </p>
+
+        <h2>🌍 Retorno</h2>
+
+        <p>
+            A cápsula volta para a Terra em alta velocidade com escudo térmico e paraquedas.
+        </p>
+
+        <h2>🧠 Importância</h2>
+
+        <p>
+            A Artemis ajuda no avanço da ciência e prepara missões futuras para Marte.
+        </p>
+
+        <h2>🎯 Objetivos</h2>
+
+        <ul>
+            <li>Explorar a Lua de forma sustentável</li>
+            <li>Criar base lunar</li>
+            <li>Testar tecnologias espaciais</li>
+            <li>Preparar missões para Marte</li>
+        </ul>
+
+    </div>
+
+    <div class="gallery">
+
+        <h2>🖼️ Galeria</h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <img src="{{ url_for('static', filename='images/imagem1.jpg') }}">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{{ url_for('static', filename='images/imagem2.jpg') }}">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{{ url_for('static', filename='images/imagem3.jpg') }}">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{{ url_for('static', filename='images/imagem4.jpg') }}">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{{ url_for('static', filename='images/imagem5.jpg') }}">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>🌎 Projeto educativo - Missão Artemis | NASA</p>
+</footer>
+
+</div>
+
+</body>
+</html>
